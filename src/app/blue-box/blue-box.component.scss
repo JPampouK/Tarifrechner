@@ -13,4 +13,25 @@
     margin-top: 80px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 80px;
+    text-align: center;
+    .blueBoxForm {
+        padding-top: 30px;
+        #inputkWh {
+            margin-right: 5px;
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            border: none;
+            padding-left: 20px;
+        }
+        #labelJahresverbrauch {
+            color: white;
+            margin-right: 270px;
+        }
+        #labelkWh {
+            margin-right: 100px;
+            color: white;
+        }
+    }
 }
