@@ -1,0 +1,24 @@
+.card {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 30px;
+    min-height: 450px;
+    width: 350px;
+    text-align: center;
+    line-height: 20px;
+    background-color: rgb(236, 236, 236);
+    #für {
+        padding-bottom: 70px;
+    }
+    #img {
+        padding-bottom: 70px;
+    }
+    #betrag {
+        color: green;
+        font-size: 40px;
+    }
+    #hinweis {
+        margin-top: 30px;
+        float: left;
+    }
+}
