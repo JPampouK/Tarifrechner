@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { BlueBoxComponent } from './blue-box/blue-box.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { TarifCardComponent } from './tarif-card/tarif-card.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FooterComponent } from './footer/footer.component';
     AppComponent,
     BlueBoxComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    TarifCardComponent
   ],
   imports: [
     BrowserModule,
