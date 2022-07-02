@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +7,7 @@ import { BlueBoxComponent } from './blue-box/blue-box.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TarifCardComponent } from './tarif-card/tarif-card.component';
+import { UebersichtComponent } from './uebersicht/uebersicht.component';
 
 
 @NgModule({
@@ -16,7 +16,8 @@ import { TarifCardComponent } from './tarif-card/tarif-card.component';
     BlueBoxComponent,
     HeaderComponent,
     FooterComponent,
-    TarifCardComponent
+    TarifCardComponent,
+    UebersichtComponent
   ],
   imports: [
     BrowserModule,
