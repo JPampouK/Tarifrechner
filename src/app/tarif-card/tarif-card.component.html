@@ -1,23 +1,11 @@
-<div class="card">
+<div class="card" *ngFor="let tarif of Tarife">
     <div class="card-body">
-        <h5 class="card-title">Bezeichnung</h5>
-        <h6 id="für" class="card-subtitle mb-2 text-muted">Für...</h6>
-        <img id="img" src="/src/assets/img/" alt="Tarif Bild">
+        <h5 class="card-title">{{ tarif.Bezeichnung }}</h5>
+        <h6 id="für" class="card-subtitle mb-2 text-muted">{{ tarif.Fuer }}</h6>
+        <img id="img" src="assets/img/{{ tarif.Img }}" alt="Tarif Bild">
         <p id="betrag" class="card-text">100 €</p>
         <p id="imJahr" class="card-text">/ Jahr</p>
         <p id="imMonat" class="card-text">(8,33 € / Monat)</p>
-        <p id="hinweis" class="card-text">Hinweis</p>
-    </div>
-</div>
-
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Bezeichnung</h5>
-        <h6 id="für" class="card-subtitle mb-2 text-muted">Für...</h6>
-        <img id="img" src="/src/assets/img/" alt="Tarif Bild">
-        <p id="betrag" class="card-text">100 €</p>
-        <p id="imJahr" class="card-text">/ Jahr</p>
-        <p id="imMonat" class="card-text">(8,33 € / Monat)</p>
-        <p id="hinweis" class="card-text">Hinweis</p>
+        <p id="hinweis" class="card-text">{{ tarif.Hinweis }}</p>
     </div>
 </div>
