@@ -1,9 +1,21 @@
+.column {
+    display: flex;
+    width: 50%
+}
+
+@media screen and (max-width: 850px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
 .card {
-    margin-right: auto;
-    margin-left: auto;
+    margin: auto;
     margin-bottom: 30px;
     min-height: 450px;
     width: 350px;
+    min-width: 350px;
     text-align: center;
     line-height: 20px;
     background-color: rgb(236, 236, 236);
