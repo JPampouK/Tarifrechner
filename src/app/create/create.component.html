@@ -1,0 +1,33 @@
+<div class="überschrift">
+    <h1>Neuen Tarif erstellen</h1>
+    <hr>
+</div>
+
+<form class="neuErstellen" method="post" #createTarif="ngForm" (ngSubmit)="setTarif(createTarif)">
+    <div class="form-group">
+        <label for="exampleInputBezeichnung">Bezeichnung</label>
+        <input ngModel name="Bezeichnung" class="form-control" id=" exampleInputBezeichnung " required placeholder="Bezeichnung ">
+    </div>
+    <div class="form-group ">
+        <label for="exampleInputFür ">Für</label>
+        <input ngModel name="Für" class="form-control " id="exampleInputFür " required placeholder="Für... ">
+    </div>
+    <div class="form-group ">
+        <label for="exampleInputBild ">Bild</label>
+        <input ngModel name="Img" type="file" class="form-control-file " required id="exampleInputBild ">
+    </div>
+    <div class="form-group ">
+        <label for="exampleInputHinweis ">Hinweis</label>
+        <input ngModel name="Hinweis" class="form-control " id="exampleInputHinweis " required placeholder="Hinweis ">
+    </div>
+    <div class="form-group ">
+        <label for="exampleInputGrundpreis ">Grundpreis</label>
+        <input ngModel name="Grundpreis" type="number " min="0 " step="0.01 " required class="form-control " id="exampleInputGrundpreis " placeholder="Grundpreis ">
+    </div>
+    <div class="form-group ">
+        <label for="exampleInputVerbrauchspreis ">Verbrauchspreis</label>
+        <input ngModel name="Verbrauchspreis" type="number " min="0 " step="0.01 " required class="form-control " id="exampleInputVerbrauchspreis " placeholder="Verbrauchspreis ">
+    </div>
+    <button type="submit" class="btn btn-success">Erstellen</button>
+    <button class="btn btn-danger " routerLink="/Übersicht">Abbrechen</button>
+</form>

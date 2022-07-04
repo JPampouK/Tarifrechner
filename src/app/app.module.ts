@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,6 +10,7 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { TarifCardComponent } from './tarif-card/tarif-card.component';
 import { UebersichtComponent } from './uebersicht/uebersicht.component';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { UebersichtComponent } from './uebersicht/uebersicht.component';
     HeaderComponent,
     FooterComponent,
     TarifCardComponent,
-    UebersichtComponent
+    UebersichtComponent,
+    CreateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

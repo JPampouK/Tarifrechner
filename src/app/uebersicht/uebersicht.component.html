@@ -1,6 +1,6 @@
 <div class="überschrift">
     <h1>Übersicht</h1>
-    <h3>1 Tarife</h3>
+    <h3>{{ Anzahl }} Tarife</h3>
     <hr>
 </div>
 <div style="overflow-x: auto;">
@@ -23,12 +23,12 @@
                 <td>
                     <form>
                         <button class="btn btn-info">Bearbeiten</button>
-                        <button class="btn btn-danger">Löschen</button>
+                        <button class="btn btn-danger" (click)="deleteTarif(tarif.ID)">Löschen</button>
                     </form>
                 </td>
             </tr>
             <tr>
-                <button class="btn btn-success">Tarif Erstellen</button>
+                <button class="btn btn-success" routerLink="/Erstellen">Tarif Erstellen</button>
             </tr>
         </tbody>
     </table>

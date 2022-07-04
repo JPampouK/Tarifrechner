@@ -3,11 +3,11 @@ import { HttpClient } from '@angular/common/http';
 
 export class Tarife {
   constructor(
-  public ID: number,
-  public Bezeichnung: string,
-  public Grundpreis: number,
-  public Verbrauchspreis: number
-  ) {}
+    public ID: number,
+    public Bezeichnung: string,
+    public Grundpreis: number,
+    public Verbrauchspreis: number
+  ) { }
 }
 
 @Component({
@@ -17,18 +17,23 @@ export class Tarife {
 })
 export class UebersichtComponent implements OnInit {
   Tarife!: Tarife[];
+  Anzahl: number;
 
   constructor(private http: HttpClient) { }
 
   ngOnInit() {
     this.getTarife();
   }
-  
-  getTarife(){
-    this.http.get<any>("http://localhost/tarifrechner/tarife.php").subscribe( respone =>{
+
+  getTarife() {
+    this.http.get<any>("http://localhost/tarifrechner/getTarife.php").subscribe(respone => {
       this.Tarife = respone;
+      this.Anzahl = this.Tarife.length;
     })
   }
 
+  deleteTarif(id: number){
+    this.http.delete("http://localhost/tarifrechner/deleteTarif.php?ID=" + id);
+  }
 
 }
