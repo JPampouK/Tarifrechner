@@ -33,7 +33,8 @@ export class UebersichtComponent implements OnInit {
   }
 
   deleteTarif(id: number){
-    this.http.delete("http://localhost/tarifrechner/deleteTarif.php?ID=" + id);
+    this.http.delete("http://localhost/tarifrechner/deleteTarif.php?ID=" + id).subscribe();
+    window.location.reload();
   }
 
 }
