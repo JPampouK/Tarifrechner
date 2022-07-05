@@ -1,8 +1,10 @@
+<!-- Überschrift -->
 <div class="überschrift">
     <h1>Tarif Bearbeiten</h1>
     <hr>
 </div>
 
+<!-- Bearbeiten Formular -->
 <form class="neuErstellen" method="post" #editTarif="ngForm" (ngSubmit)="updateTarif(editTarif)">
     <div *ngFor="let tarif of Tarif">
         <div class="form-group">

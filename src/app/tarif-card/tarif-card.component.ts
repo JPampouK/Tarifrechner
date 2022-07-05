@@ -27,6 +27,7 @@ export class TarifCardComponent implements OnInit {
     this.getTarife();
   }
 
+  // Alle Tarife holen
   getTarife(){
     this.http.get<any>("http://localhost/tarifrechner/getTarife.php").subscribe( respone =>{
       this.Tarife = respone;

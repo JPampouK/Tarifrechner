@@ -27,10 +27,12 @@ export class UebersichtComponent implements OnInit {
     this.getTarife();
   }
 
+  // ID an Bearbeiten senden
   sendId(id: number){
     this.router.navigate(['/Bearbeiten', id]);
   }
 
+  // Alle Trife holen
   getTarife() {
     this.http.get<any>("http://localhost/tarifrechner/getTarife.php").subscribe(respone => {
       this.Tarife = respone;
@@ -38,6 +40,7 @@ export class UebersichtComponent implements OnInit {
     })
   }
 
+  // Tarif löschen
   deleteTarif(id: number){
     this.http.delete("http://localhost/tarifrechner/deleteTarif.php?ID=" + id).subscribe();
     window.location.reload();

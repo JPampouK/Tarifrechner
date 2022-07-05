@@ -5,6 +5,7 @@ import { UebersichtComponent } from './uebersicht/uebersicht.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 
+// Routen erstellen + Default Route
 const routes: Routes = [
   { path: "Tarifrechner", component: BlueBoxComponent },
   { path: "Übersicht", component: UebersichtComponent },

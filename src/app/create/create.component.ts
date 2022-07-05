@@ -29,14 +29,14 @@ export class CreateComponent implements OnInit {
   ngOnInit() {
   }
 
+  // Aktuelle ID holen
   getId($event){
     this.id = $event
   }
 
-  // Tarif Erstellen
+  // Tarif Erstellen 
   setTarif(form: NgForm) {
     JSON.stringify(form.value);
-    console.log(form.value);
     this.http.post("http://localhost/tarifrechner/setTarif.php", form.value).subscribe();
     this.router.navigate(['/Übersicht']);
   }
