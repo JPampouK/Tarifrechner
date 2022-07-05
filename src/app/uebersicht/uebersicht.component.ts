@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 export class Tarife {
   constructor(
@@ -18,11 +19,16 @@ export class Tarife {
 export class UebersichtComponent implements OnInit {
   Tarife!: Tarife[];
   Anzahl: number;
+  event = new EventEmitter();
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   ngOnInit() {
     this.getTarife();
+  }
+
+  sendId(id: number){
+    this.router.navigate(['/Bearbeiten', id]);
   }
 
   getTarife() {
@@ -36,5 +42,4 @@ export class UebersichtComponent implements OnInit {
     this.http.delete("http://localhost/tarifrechner/deleteTarif.php?ID=" + id).subscribe();
     window.location.reload();
   }
-
 }

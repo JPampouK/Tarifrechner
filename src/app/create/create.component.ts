@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UebersichtComponent } from '../uebersicht/uebersicht.component';
 
 export class Tarife {
   constructor(
@@ -25,18 +24,21 @@ export class CreateComponent implements OnInit {
 
   constructor(private http: HttpClient, private router: Router) { }
 
+  id: number;
+
   ngOnInit() {
+  }
+
+  getId($event){
+    this.id = $event
   }
 
   // Tarif Erstellen
   setTarif(form: NgForm) {
     JSON.stringify(form.value);
     console.log(form.value);
-    this.http.post("http://localhost/tarifrechner/setTarif.php", form.value)
-      .subscribe(
-        (val) => {
-          this.router.navigate(['/Übersicht']);
-        });
+    this.http.post("http://localhost/tarifrechner/setTarif.php", form.value).subscribe();
+    this.router.navigate(['/Übersicht']);
   }
 }
 

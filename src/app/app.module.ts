@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { TarifCardComponent } from './tarif-card/tarif-card.component';
 import { UebersichtComponent } from './uebersicht/uebersicht.component';
 import { CreateComponent } from './create/create.component';
+import { EditComponent } from './edit/edit.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { CreateComponent } from './create/create.component';
     FooterComponent,
     TarifCardComponent,
     UebersichtComponent,
-    CreateComponent
+    CreateComponent,
+    EditComponent
   ],
   imports: [
     BrowserModule,

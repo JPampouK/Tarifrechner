@@ -22,7 +22,7 @@
                 <td>{{ tarif.Verbrauchspreis }} ct.</td>
                 <td>
                     <form>
-                        <button class="btn btn-info">Bearbeiten</button>
+                        <button class="btn btn-info" (click)="sendId(tarif.ID)" routerLink="/Bearbeiten">Bearbeiten</button>
                         <button class="btn btn-danger" (click)="deleteTarif(tarif.ID)">Löschen</button>
                     </form>
                 </td>
