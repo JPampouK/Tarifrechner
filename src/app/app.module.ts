@@ -12,6 +12,8 @@ import { TarifCardComponent } from './tarif-card/tarif-card.component';
 import { UebersichtComponent } from './uebersicht/uebersicht.component';
 import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
+import { GetTarifeService } from './get-tarife.service';
+import { PreisBerechnenService } from './preis-berechnen.service';
 
 
 @NgModule({
@@ -31,7 +33,7 @@ import { EditComponent } from './edit/edit.component';
     HttpClientModule,
     FormsModule
   ],
-  providers: [],
+  providers: [GetTarifeService, PreisBerechnenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

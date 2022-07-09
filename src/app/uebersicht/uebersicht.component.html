@@ -1,7 +1,7 @@
 <!-- Überschrift -->
 <div class="überschrift">
     <h1>Übersicht</h1>
-    <h3>{{ Anzahl }} Tarife</h3>
+    <h3>{{ this._getTarife.Anzahl }} Tarife</h3>
     <hr>
 </div>
 
@@ -18,7 +18,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let tarif of Tarife">
+            <tr *ngFor="let tarif of _getTarife.Tarife">
                 <th scope="row">{{ tarif.ID }}</th>
                 <td>{{ tarif.Bezeichnung }}</td>
                 <td>{{ tarif.Grundpreis }} €</td>

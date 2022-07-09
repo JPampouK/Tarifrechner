@@ -1,6 +1,7 @@
 import { Component, OnInit, EventEmitter } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { GetTarifeService } from '../get-tarife.service';
 
 export class Tarife {
   constructor(
@@ -17,27 +18,18 @@ export class Tarife {
   styleUrls: ['./uebersicht.component.scss']
 })
 export class UebersichtComponent implements OnInit {
-  Tarife!: Tarife[];
   Anzahl: number;
   event = new EventEmitter();
 
-  constructor(private http: HttpClient, private router: Router) { }
+  constructor(private http: HttpClient, private router: Router, public _getTarife: GetTarifeService) { }
 
   ngOnInit() {
-    this.getTarife();
+    this._getTarife.getTarife();
   }
 
   // ID an Bearbeiten senden
   sendId(id: number){
     this.router.navigate(['/Bearbeiten', id]);
-  }
-
-  // Alle Trife holen
-  getTarife() {
-    this.http.get<any>("http://localhost/tarifrechner/getTarife.php").subscribe(respone => {
-      this.Tarife = respone;
-      this.Anzahl = this.Tarife.length;
-    })
   }
 
   // Tarif löschen
