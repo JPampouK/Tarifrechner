@@ -14,6 +14,8 @@ import { CreateComponent } from './create/create.component';
 import { EditComponent } from './edit/edit.component';
 import { GetTarifeService } from './get-tarife.service';
 import { PreisBerechnenService } from './preis-berechnen.service';
+import { DialogComponent } from './dialog/dialog.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -25,13 +27,15 @@ import { PreisBerechnenService } from './preis-berechnen.service';
     TarifCardComponent,
     UebersichtComponent,
     CreateComponent,
-    EditComponent
+    EditComponent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [GetTarifeService, PreisBerechnenService],
   bootstrap: [AppComponent]
