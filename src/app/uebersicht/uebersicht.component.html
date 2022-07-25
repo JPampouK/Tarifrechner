@@ -25,14 +25,13 @@
                 <td>{{ tarif.Verbrauchspreis }} ct.</td>
                 <td>
                     <form>
-                        <button class="btn btn-info" (click)="sendId(tarif.ID)" routerLink="/Bearbeiten">Bearbeiten</button>
-                        <button class="btn btn-danger" (click)="deleteTarif(tarif.ID)">Löschen</button>
+                        <button class="btn btn-info" (click)="sendId(tarif.ID)" routerLink="/Bearbeiten" title="Bearbeiten"><img id="icon" src="assets/img/icon-edit.svg" alt="Bearbeiten"></button>
+                        <button class="btn btn-danger" (click)="deleteTarif(tarif.ID)" title="Löschen"><img id="icon" src="assets/img/icon-delete.svg" alt="Löschen"></button>
                     </form>
                 </td>
             </tr>
             <tr>
-                <button class="btn btn-success" routerLink="/Erstellen">Tarif Erstellen</button>
-
+                <button class="btn btn-success" routerLink="/Erstellen" title="Tarif Erstellen"><img id="icon" src="assets/img/icon-add.svg" alt="Tarif Erstellen"></button>
             </tr>
         </tbody>
     </table>
