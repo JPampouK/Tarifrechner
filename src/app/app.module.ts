@@ -16,6 +16,7 @@ import { GetTarifeService } from './get-tarife.service';
 import { PreisBerechnenService } from './preis-berechnen.service';
 import { DialogComponent } from './dialog/dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    MatDialogModule
   ],
   providers: [GetTarifeService, PreisBerechnenService],
   bootstrap: [AppComponent]
