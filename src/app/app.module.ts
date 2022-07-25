@@ -17,6 +17,8 @@ import { PreisBerechnenService } from './preis-berechnen.service';
 import { DialogComponent } from './dialog/dialog.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
+import { ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -29,7 +31,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     UebersichtComponent,
     CreateComponent,
     EditComponent,
-    DialogComponent
+    DialogComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatDialogModule
+    MatDialogModule,
+    ReactiveFormsModule
   ],
   providers: [GetTarifeService, PreisBerechnenService],
   bootstrap: [AppComponent]
