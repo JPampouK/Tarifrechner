@@ -17,3 +17,13 @@ table {
 .btn-danger {
     margin-left: 10px;
 }
+
+.alert {
+    width: 250px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+strong::before {
+    content: '\2713';
+}

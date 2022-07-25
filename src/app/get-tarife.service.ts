@@ -1,16 +1,26 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-export class Tarife {
-  constructor(
-  public ID: number,
-  public Bezeichnung: string,
-  public Fuer: string,
-  public Img: string,
-  public Hinweis: string,
-  public Grundpreis: number,
-  public Verbrauchspreis: number
-  ) {}
+// export class Tarife {
+//   constructor(
+//   public ID: number,
+//   public Bezeichnung: string,
+//   public Fuer: string,
+//   public Img: string,
+//   public Hinweis: string,
+//   public Grundpreis: number,
+//   public Verbrauchspreis: number
+//   ) {}
+// }
+
+interface Tarife {
+  ID: number;
+  Bezeichnung: string;
+  Fuer: string;
+  Img: string;
+  Hinweis: string;
+  Grundpreis: number;
+  Verbrauchspreis: number;
 }
 
 @Injectable({

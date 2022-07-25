@@ -1,16 +1,7 @@
-import { Component, OnInit, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
 import { GetTarifeService } from '../get-tarife.service';
-
-export class Tarife {
-  constructor(
-    public ID: number,
-    public Bezeichnung: string,
-    public Grundpreis: number,
-    public Verbrauchspreis: number
-  ) { }
-}
 
 @Component({
   selector: 'app-uebersicht',
@@ -18,12 +9,11 @@ export class Tarife {
   styleUrls: ['./uebersicht.component.scss']
 })
 export class UebersichtComponent implements OnInit {
-  Anzahl: number;
-  event = new EventEmitter();
 
   constructor(private http: HttpClient, private router: Router, public _getTarife: GetTarifeService) { }
 
   ngOnInit() {
+    // Alle Tarife holen
     this._getTarife.getTarife();
   }
 

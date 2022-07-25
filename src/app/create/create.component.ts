@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -25,12 +25,13 @@ export class CreateComponent implements OnInit {
   constructor(private http: HttpClient, private router: Router) { }
 
   id: number;
+  success = false;
 
   ngOnInit() {
   }
 
   // Aktuelle ID holen
-  getId($event){
+  getId($event) {
     this.id = $event
   }
 
@@ -38,7 +39,10 @@ export class CreateComponent implements OnInit {
   setTarif(form: NgForm) {
     JSON.stringify(form.value);
     this.http.post("http://localhost/tarifrechner/setTarif.php", form.value).subscribe();
-    this.router.navigate(['/Übersicht']);
+    this.router.navigate(['/Übersicht'])
+      .then(() => {
+        window.location.reload();
+    });
   }
 }
 

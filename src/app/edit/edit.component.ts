@@ -30,7 +30,7 @@ export class EditComponent implements OnInit {
   }
 
   // Ausgewählten Tarif holen
-  getTarif(){
+  getTarif() {
     this.aRouter.params.subscribe(params => {
       this.id = params['id'];
     });
@@ -40,10 +40,12 @@ export class EditComponent implements OnInit {
   }
 
   // Update durchführen
-  updateTarif(form: NgForm){
+  updateTarif(form: NgForm) {
     let body = JSON.stringify(form.value);
     this.http.post("http://localhost/tarifrechner/editTarif.php?ID=" + this.id, body).subscribe();
     this.router.navigate(['/Übersicht'])
+      .then(() => {
+        window.location.reload();
+      });
   }
-
 }

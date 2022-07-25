@@ -7,7 +7,7 @@ import { GetTarifeService } from './get-tarife.service';
 export class PreisBerechnenService {
   ergebnisJahr: number;
   ergebnisMonat: number;
-  Tarife: any = [];
+  Tarife = [];
 
   constructor(public _getTarife: GetTarifeService) { }
 
