@@ -34,9 +34,9 @@ export class GetTarifeService {
 
     // Alle Tarife holen
     getTarife(){
-      this.http.get<any>("http://localhost/tarifrechner/getTarife.php").subscribe( respone =>{
-        this.Tarife = respone;
-        this.Anzahl = this.Tarife.length;
+      this.http.get<undefined>("http://localhost/tarifrechner/getTarife.php").subscribe( data =>{
+        this.Tarife = data; // Antwort in Array speichern
+        this.Anzahl = this.Tarife.length; // Anzahl von Tarifen setzten
       })
     }
 }
