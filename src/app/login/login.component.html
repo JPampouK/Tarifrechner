@@ -4,28 +4,36 @@
         <div class="modal-content">
             <div class="modal-header">
                 <h4 class="modal-title" id="myModalLabel">Login</h4>
+                <h6 routerLink="/Tarifrechner">Zurück</h6>
             </div>
             <div class="modal-body">
                 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                     <div class="form-group">
                         <label>E-Mail</label>
-                        <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && inputValues.email.errors }" />
+                        <input type="text" id="email" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && inputValues.email.errors }" />
                         <div *ngIf="submitted && inputValues.email.errors" class="invalid-feedback">
-                            <div *ngIf="inputValues.email.errors.required">Email is required</div>
-                            <div *ngIf="inputValues.email.errors.email">Email must be a valid email address</div>
+                            <div *ngIf="inputValues.email.errors.required">E-Mail ist pflcht.</div>
+                            <div *ngIf="inputValues.email.errors.email">Gib bitte eine gültige E-Mail an.</div>
                         </div>
                     </div>
                     <div class="form-group">
                         <label>Passwort</label>
-                        <input type="password" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && inputValues.password.errors }" />
+                        <input type="password" id="passwort" formControlName="password" class="form-control" [ngClass]="{ 'is-invalid': submitted && inputValues.password.errors }" />
                         <div *ngIf="submitted && inputValues.password.errors" class="invalid-feedback">
-                            <div *ngIf="inputValues.password.errors.required">Password is required</div>
+                            <div *ngIf="inputValues.password.errors.required">Passwort ist pflicht.</div>
                         </div>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" formControlName="merken" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          Eingabe Merken
+                        </label>
                     </div>
                 </form>
             </div>
             <div class="modal-footer">
                 <button type="submit" class="btn btn-primary" style="width: 100%;" (click)="onSubmit()">Login</button>
+                <h6>{{ fehlermeldung }}</h6>
             </div>
         </div>
     </div>

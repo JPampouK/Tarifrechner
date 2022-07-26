@@ -19,7 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './login/login.component';
-
+import { CookieService } from 'angular2-cookie';
 
 @NgModule({
   declarations: [
@@ -43,7 +43,7 @@ import { LoginComponent } from './login/login.component';
     MatDialogModule,
     ReactiveFormsModule
   ],
-  providers: [GetTarifeService, PreisBerechnenService],
+  providers: [GetTarifeService, PreisBerechnenService, CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
