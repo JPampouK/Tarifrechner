@@ -24,7 +24,7 @@ export class PreisBerechnenService {
       // Monat
       this.ergebnisMonat = this.ergebnisJahr / 12;
 
-      // Auf zwei nachkommastellen Runden
+      // Auf zwei Nachkommastellen runden
       this.ergebnisJahr = Math.round(this.ergebnisJahr * 100) / 100;
       this.ergebnisMonat = Math.round(this.ergebnisMonat * 100) / 100;
 
